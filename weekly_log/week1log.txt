@@ -1,0 +1,3 @@
+creating github account
+creating github repo for course project
+collecting images for dataset creation
