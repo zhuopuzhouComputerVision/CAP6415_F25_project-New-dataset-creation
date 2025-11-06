@@ -1,0 +1,19 @@
+# Ignore dataset outputs and results
+data/
+yolo_train/
+yolo_eval/
+yolo_infer/
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+*.env
+*.venv
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+# Ignore OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+YOLO Custom Training Session Summary (2025-11-06)
+
+1. Project Setup:
+- Discussed minimal file structure for YOLO training on custom data.
+- Created scripts to rename images and convert LabelMe JSONs to YOLO TXT format.
+- Split dataset into train/val/test and generated data.yaml.
+
+2. Training:
+- Trained YOLOv8 model using the prepared dataset.
+- Achieved high precision, recall, and mAP metrics.
+
+3. Evaluation & Inference:
+- Evaluated model on validation set with visualizations (confusion matrix, PR/F1 curves, etc.).
+- Ran inference on test images and saved visualized predictions.
+
+4. Metrics & Visualizations Explained:
+- Explained box loss, class loss, DFL, precision, recall, mAP@0.5, mAP@0.5:0.95, and F1-confidence curve.
+- Discussed confidence thresholds and how to select the optimal value.
+
+5. Example F1-Confidence Curve:
+- Showed how to interpret the curve and select the best threshold (e.g., 0.314 for max F1).
+
+6. Next Steps:
+- Provided scripts for evaluation and inference.
+- Explained how to use results and what each metric/visualization means.
+
+This summary can be used to recall the workflow, scripts, and key concepts discussed in this session.
