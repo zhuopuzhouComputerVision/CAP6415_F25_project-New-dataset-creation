@@ -7,7 +7,7 @@ def main():
     # Create YOLO model (use yolov8n for speed, change as needed)
     model = YOLO('yolov8n.pt')
     # Train
-    model.train(data=data_yaml, epochs=50, imgsz=640, batch=16, project='yolo_train', name='exp', exist_ok=True)
+    model.train(data=data_yaml, epochs=5, imgsz=640, batch=16, project='yolo_train', name='exp', exist_ok=True)
 
 if __name__ == '__main__':
     main()

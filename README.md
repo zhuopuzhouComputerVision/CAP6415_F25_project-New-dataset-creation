@@ -13,16 +13,59 @@ This project provides a complete pipeline for preparing a custom dataset (LabelM
 
 ### 1. Clone the Repository
 ```
-git clone https://github.com/<your-username>/CAP6415_F25_project-New-dataset-creation.git
+git clone https://github.com/zhuopuzhouComputerVision/CAP6415_F25_project-New-dataset-creation.git
 cd CAP6415_F25_project-New-dataset-creation
 ```
 
 ### 2. Install Requirements
+
+#### Prerequisites
 - Python 3.8+
 - [Anaconda](https://www.anaconda.com/) recommended
-- Install dependencies:
+- NVIDIA GPU with updated drivers (for GPU training)
+
+#### Option 1: Using Anaconda (Recommended)
+
+1. Initialize conda for PowerShell (one-time setup):
+```powershell
+conda init powershell
 ```
+**Important:** Close and reopen your PowerShell terminal after running this command.
+
+2. Create a new conda environment:
+```powershell
+conda create -n yolo_project python=3.8
+```
+
+3. Activate the environment:
+```powershell
+conda activate yolo_project
+```
+
+4. Install PyTorch with CUDA support (for RTX 50-series or newer GPUs):
+```powershell
+pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+
+For older GPUs, use CUDA 12.1:
+```powershell
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+```
+
+5. Install other dependencies:
+```powershell
 pip install ultralytics pillow
+```
+
+#### Option 2: Using pip only
+```powershell
+pip install ultralytics pillow
+pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+
+#### Verify Installation
+```powershell
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'No GPU')"
 ```
 
 ### 3. Prepare Your Data
@@ -75,5 +118,4 @@ yolo_infer/          # Inference outputs
 - Adjust script parameters as needed for your dataset.
 - See `conversation_summary_2025-11-06.txt` for a summary of the workflow and key concepts.
 
-## License
-MIT
+
