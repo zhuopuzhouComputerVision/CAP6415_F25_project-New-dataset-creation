@@ -21,43 +21,10 @@ cd CAP6415_F25_project-New-dataset-creation
 
 #### Prerequisites
 - Python 3.8+
-- [Anaconda](https://www.anaconda.com/) recommended
 - NVIDIA GPU with updated drivers (for GPU training)
 
-#### Option 1: Using Anaconda (Recommended)
 
-1. Initialize conda for PowerShell (one-time setup):
-```powershell
-conda init powershell
-```
-**Important:** Close and reopen your PowerShell terminal after running this command.
-
-2. Create a new conda environment:
-```powershell
-conda create -n yolo_project python=3.8
-```
-
-3. Activate the environment:
-```powershell
-conda activate yolo_project
-```
-
-4. Install PyTorch with CUDA support (for RTX 50-series or newer GPUs):
-```powershell
-pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
-```
-
-For older GPUs, use CUDA 12.1:
-```powershell
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-```
-
-5. Install other dependencies:
-```powershell
-pip install ultralytics pillow
-```
-
-#### Option 2: Using pip only
+#### Using pip 
 ```powershell
 pip install ultralytics pillow
 pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
