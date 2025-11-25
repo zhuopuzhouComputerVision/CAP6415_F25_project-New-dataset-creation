@@ -83,6 +83,6 @@ yolo_infer/          # Inference outputs
 
 ## Notes
 - Adjust script parameters as needed for your dataset.
-- See `conversation_summary_2025-11-06.txt` for a summary of the workflow and key concepts.
+
 
 
